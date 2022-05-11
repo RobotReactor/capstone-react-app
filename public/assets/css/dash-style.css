@@ -6,6 +6,7 @@
     overflow-y: hidden;
     /* outline: 2px solid rgb(9, 255, 0); */
     --background-color: rgb(207, 207, 207);
+
 }
 
 .top-dock {
@@ -567,6 +568,7 @@
     overflow: hidden;
     border-left: 10px solid white;
     border-right: 15px solid rgb(136, 136, 136);
+    background-color: white;
 }
 
 .sidebar.active {
@@ -581,21 +583,14 @@
     width: 100%;
 }
 
-.list-item:nth-child(n+2) {
-    position: relative;
-    gap: 1rem;
-    width: 100%;
-    list-style: none;
-}
-
-.list-item:nth-child(n+2):hover {
+.list-item:hover {
     background-color: rgb(201, 201, 201);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
 
-.list-item:nth-child(n+2).active {
-    background-color: rgb(136, 136, 136);
+.list-item.active {
+    background-color: rgb(0, 128, 255);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
@@ -618,6 +613,7 @@
     text-decoration: none;
     color: rgb(56, 91, 209);
 }
+
 
 .minor-anchor .nav-icon {
     position: relative;
@@ -816,15 +812,10 @@
         left: 100%
     }
     .top-dock.active {
-        transition: all 1.2s;
+        transition: all 1s;
         left: 100%;
     }
-    .btn-toggle.active {
-        position: relative;
-        z-index: 100000;
-        right: 90px;
-        transition: all 1s;
-    }
+  
     .main-title {
         opacity: 0;
         transition: all 1s;
@@ -842,12 +833,5 @@
     }
     .btn-language {
         outline: none;
-    }
-}
-
-@media (max-width: 320px) {
-    * {
-        max-width: 320px;
-        background-color: red;
     }
 }

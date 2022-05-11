@@ -2,11 +2,11 @@ import Sidebar from "./Sidebar";
 
 const Header = () => {
 
-    function openSidebar() {
+    function toggleSidebar() {
         let toggle = document.querySelector('.btn-toggle');
         let sidebar = document.querySelector('.sidebar');
-        let mainScreen = document.querySelector('.main-screen');
         let navBar = document.querySelector('.top-dock');
+        let mainScreen = document.querySelector('.main-screen');
         let togSammich = document.querySelector('#tog-sammy');
         let togX = document.querySelector('#tog-x');
         toggle.classList.toggle('active');
@@ -48,11 +48,13 @@ const Header = () => {
         info2.classList.toggle('active');
         btn.classList.toggle('active');
     }
+
+
     
   return (
       <header>
         <div className="top-dock">
-            <div className="btn-toggle"  onClick={openSidebar}>
+            <div className="btn-toggle"  onClick={toggleSidebar}>
                 <i id="tog-sammy" className="fa fa-bars" aria-hidden="true"></i>
                 <i id="tog-x" className="fa fa-times" aria-hidden="true"></i>
             </div>

@@ -11,12 +11,14 @@ import Help from './components/Help';
 import Settings from './components/Settings';
 
 function App() {
+
     return ( 
         <div>
-            <Header />
             <Router>
+                <Header />
                 <Sidebar />
                 <Routes>
+                    <Route path='/' element={<DashboardContent />}/>
                     <Route path='/dashboard/home' element={<DashboardContent />}/>
                     <Route path='/dashboard/log-workout' element={<LogWorkout />}/>
                     <Route path='/dashboard/add-workout' element={<AddWorkout />}/>
