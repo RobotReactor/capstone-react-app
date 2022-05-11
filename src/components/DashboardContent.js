@@ -1,10 +1,9 @@
-import React from "react";
+import React from 'react'
 
-class Home extends React.Component {
-    render() {
-        return ( 
-        <div>
-            <div id="main-screen" className="main-screen">
+const DashboardContent = () => {
+  return (
+    <div>
+        <div id="main-screen" className="main-screen">
                 <div className="top-container">
                     <div className="top-page-info">
                         <div className="bc-info">
@@ -36,9 +35,8 @@ class Home extends React.Component {
                     <div className="big-section"></div>
                 </div>
             </div>
-        </div>
-        );
-    }
+    </div>
+  )
 }
 
-export default Home;
+export default DashboardContent

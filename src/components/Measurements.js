@@ -2,7 +2,9 @@ import React from 'react'
 
 const Measurements = () => {
   return (
-    <div id="main-screen" className="main-screen"></div>
+    <div id="main-screen" className="main-screen">
+      <h1>Measurements</h1>
+    </div>
   )
 }
 
