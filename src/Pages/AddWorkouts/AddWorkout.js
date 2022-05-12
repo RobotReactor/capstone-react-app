@@ -1,4 +1,5 @@
 import React from 'react'
+import AddWorkouts from './AddWorkouts.css'
 
 const AddWorkout = () => {
   return (

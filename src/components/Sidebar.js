@@ -1,22 +1,17 @@
 import { NavLink } from "react-router-dom";
-import React, { Component } from "react";
 
 const Sidebar = () => {
 
-    const sayHello = (name) => {
-        if(name == "Name") {
-            alert("yep");
-        }
-      };
-    
      function onClik () {
+
         let sidebar = document.querySelector('.sidebar');
         let sidebarActive = sidebar.classList.contains('active');
         let toggle = document.querySelector('.btn-toggle');
         let navBar = document.querySelector('.top-dock');
         let togSammich = document.querySelector('#tog-sammy');
         let togX = document.querySelector('#tog-x');
-
+        let mainScreen = document.querySelector('.main-screen');
+        
         
         if(sidebarActive) {
             toggle.classList.toggle('active');
@@ -24,6 +19,10 @@ const Sidebar = () => {
             togSammich.classList.toggle('active');
             togX.classList.toggle('active');
             sidebar.classList.toggle('active');
+
+        } else {
+            toggle.classList.remove('active');
+            mainScreen.classList.remove('active');
         }
     }
 
@@ -36,7 +35,7 @@ const Sidebar = () => {
                     <span className="main-title">Wor::Cout</span>
                 </a>
             </NavLink>
-            <NavLink id="itemHome" className="list-item" to="/dashboard/home" onClick={() => {sayHello("Name");}}>
+            <NavLink id="itemHome" className="list-item" to="/dashboard/home" onClick={onClik}>
                 <a className="minor-anchor">
                     <span className="nav-icon"><i className="fa fa-area-chart" aria-hidden="true"></i></span>
                     <span className="title">Dashboard</span>

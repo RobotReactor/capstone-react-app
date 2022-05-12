@@ -3,18 +3,28 @@ import Sidebar from "./Sidebar";
 const Header = () => {
 
     function toggleSidebar() {
-        let toggle = document.querySelector('.btn-toggle');
+
         let sidebar = document.querySelector('.sidebar');
+        let sidebarActive = sidebar.classList.contains('active');
+
+        let toggle = document.querySelector('.btn-toggle');
         let navBar = document.querySelector('.top-dock');
         let mainScreen = document.querySelector('.main-screen');
         let togSammich = document.querySelector('#tog-sammy');
         let togX = document.querySelector('#tog-x');
+
+        do {
         toggle.classList.toggle('active');
         sidebar.classList.toggle('active');
         mainScreen.classList.toggle('active');
         navBar.classList.toggle('active');
         togSammich.classList.toggle('active');
         togX.classList.toggle('active');
+        }
+        while (sidebarActive == true)
+
+        mainScreen.classList.remove('active');
+
     }
     
     function toggleDark() {
@@ -49,8 +59,6 @@ const Header = () => {
         btn.classList.toggle('active');
     }
 
-
-    
   return (
       <header>
         <div className="top-dock">

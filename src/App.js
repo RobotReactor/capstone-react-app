@@ -1,14 +1,14 @@
-import Header from './components/Header';
-import Sidebar from './components/Sidebar';
+import Header from './Components/Header';
+import Sidebar from './Components/Sidebar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import DashboardContent from './components/DashboardContent';
-import LogWorkout from './components/LogWorkout';
-import AddWorkout from './components/AddWorkout';
-import Measurements from './components/Measurements';
-import Goals from './components/Goals';
-import SignOut from './components/SignOut';
-import Help from './components/Help';
-import Settings from './components/Settings';
+import DashboardContent from './Components/DashboardContent';
+import LogWorkout from './Components/LogWorkout';
+import AddWorkout from './Pages/AddWorkouts/AddWorkout';
+import Measurements from './Components/Measurements';
+import Goals from './Components/Goals';
+import SignOut from './Components/SignOut';
+import Help from './Components/Help';
+import Settings from './Components/Settings';
 
 function App() {
 
