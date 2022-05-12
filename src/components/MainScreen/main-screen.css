@@ -1,0 +1,23 @@
+.main-screen {
+    /* This Should Be 0px */
+    --offset-pos: 80px;
+    --container-gap: 1rem;
+    --background-color: rgb(131, 98, 98);
+    display: flex;
+    overflow-y: scroll;
+    justify-content: left;
+    flex-direction: column;
+    gap: calc(var(--container-gap) / 2);
+    position: relative;
+    left: var(--offset-pos);
+    width: calc(100% - var(--offset-pos));
+    height: 100vh;
+    padding-bottom: calc(var(--container-gap) * 5);
+    background-color: var(--background-color);
+    transition: all 1s;
+}
+
+.main-screen.active {
+    left: 300px;
+    width: calc(100% - 300px);
+}

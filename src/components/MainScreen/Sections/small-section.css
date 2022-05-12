@@ -1,0 +1,14 @@
+.nrml-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 4px 3px 2px 2px rgba(0, 0, 0, 0.178);
+    height: calc(100% - var(--container-gap));
+    width: 300px;
+    margin: calc(var(--container-gap) / 2);
+    padding: calc(var(--container-gap) / 2);
+    flex-basis: 1;
+    flex-grow: 1;
+}

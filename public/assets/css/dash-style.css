@@ -715,6 +715,10 @@
     transition: all 1s;
 }
 
+#testing {
+    background-color: red;
+}
+
 @media (max-width: 992px) {
     .sidebar {
         width: 0px;

@@ -1,10 +1,9 @@
 import React from 'react'
+import MainScreen from '../../Components/MainScreen/MainScreen'
 
 const Measurements = () => {
   return (
-    <div id="main-screen" className="main-screen">
-      <h1>Measurements</h1>
-    </div>
+    <MainScreen />
   )
 }
 

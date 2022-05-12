@@ -1,5 +1,3 @@
-import Sidebar from "./Sidebar";
-
 const Header = () => {
 
     function toggleSidebar() {
@@ -12,19 +10,22 @@ const Header = () => {
         let mainScreen = document.querySelector('.main-screen');
         let togSammich = document.querySelector('#tog-sammy');
         let togX = document.querySelector('#tog-x');
-
-        do {
-        toggle.classList.toggle('active');
-        sidebar.classList.toggle('active');
-        mainScreen.classList.toggle('active');
-        navBar.classList.toggle('active');
-        togSammich.classList.toggle('active');
-        togX.classList.toggle('active');
+        
+        if(!sidebarActive) {
+            toggle.classList.add('active');
+            navBar.classList.add('active');
+            togSammich.classList.add('active');
+            togX.classList.add('active');
+            mainScreen.classList.add('active');
+            sidebar.classList.add('active');
+        } else {
+            toggle.classList.remove('active');
+            navBar.classList.remove('active');
+            togSammich.classList.remove('active');
+            togX.classList.remove('active');
+            mainScreen.classList.remove('active');
+            sidebar.classList.remove('active');
         }
-        while (sidebarActive == true)
-
-        mainScreen.classList.remove('active');
-
     }
     
     function toggleDark() {
@@ -95,7 +96,7 @@ const Header = () => {
                 <div className="top-divider"></div>
             </div>
             <div className="user">
-                <img src="./assets/images/def-icon.png" />
+                <img src="./assets/images/def-icon.png" alt="prop"/>
             </div>
             <div id="right-most-divider" className="top-divider"></div>
             <div className="drop-down" onClick={openInfo}>

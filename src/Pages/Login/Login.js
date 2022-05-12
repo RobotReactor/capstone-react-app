@@ -1,9 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react';
+import MainScreen from '../../Components/MainScreen/MainScreen';
 
-class Login extends Component {
+class Login extends React {
   render() {
     return (
-      <div>Login</div>
+      <MainScreen />
     )
   }
 }
