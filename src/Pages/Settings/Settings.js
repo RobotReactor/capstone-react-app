@@ -1,11 +1,11 @@
 import React from 'react'
-import MainScreen from '../../Components/MainScreen/MainScreen'
 
 const Settings = () => {
   return (
-    <MainScreen>
-      <h1>aijdaiwjdiajwd</h1>
-    </MainScreen>
+    <div id="main-screen" className="main-screen">
+        <h1>Settings Screen</h1>
+    </div>
+   
   )
 }
 

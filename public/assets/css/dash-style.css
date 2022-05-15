@@ -590,7 +590,7 @@
 }
 
 .list-item.active {
-    background-color: rgb(0, 128, 255);
+    background-color: rgb(136, 136, 136);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }

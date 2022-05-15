@@ -1,10 +1,11 @@
 import React from 'react'
-import MainScreen from '../../Components/MainScreen/MainScreen'
 
 const Measurements = () => {
   return (
-    <MainScreen />
-  )
+      <div id="main-screen" className="main-screen">
+        <h1>Measurements Screen</h1>
+      </div>
+     )
 }
 
 export default Measurements

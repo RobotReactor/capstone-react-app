@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import { logo } from '../main-emblem.png';
 
 const Sidebar = () => {
 
@@ -36,7 +35,7 @@ const Sidebar = () => {
         <ul>
             <NavLink className="main-list-item" to="#">
                 <a href="/dashboard/" className="main-anchor">
-                    <span className="main-emblem"><img src="{logo}" alt="Main Emblem"/></span>
+                    <span className="main-emblem"><img src={require("../main-emblem.png")} alt="Main Emblem"/></span>
                     <span className="main-title">Wor::Cout</span>
                 </a>
             </NavLink>

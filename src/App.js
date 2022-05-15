@@ -2,13 +2,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './Components/Header';
 import Sidebar from './Components/Sidebar';
 import LogWorkout from './Pages/LogWorkout/LogWorkout';
-import AddWorkout from './Pages/AddWorkouts/AddWorkout';
 import Measurements from './Pages/Measurements/Measurements';
 import Goals from './Pages/Goals/Goals';
 import SignOut from './Pages/SignOut/SignOut';
 import Help from './Pages/Help/Help';
 import Settings from './Pages/Settings/Settings';
 import Home from './Pages/Home/Home';
+import AddWorkout from './Pages/AddWorkouts/AddWorkout';
 
 function App() {
 

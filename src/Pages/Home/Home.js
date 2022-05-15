@@ -1,16 +1,10 @@
 import React from 'react'
-import LargeContainer from '../../Components/MainScreen/Containers/LargeContainer'
-import MainScreen from '../../Components/MainScreen/MainScreen'
 
 const Home = () => {
   return (
-      <>
-       <MainScreen>
-       <LargeContainer>
-               efsef
-           </LargeContainer>
-       </MainScreen>
-      </>
+    <div id="main-screen" className="main-screen">
+        <h1>Home Screen</h1>
+    </div>
    
   )
 }
