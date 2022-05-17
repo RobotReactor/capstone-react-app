@@ -96,7 +96,7 @@ const Header = () => {
                 <div className="top-divider"></div>
             </div>
             <div className="user">
-                <img src="./assets/images/def-icon.png" alt="prop"/>
+                <img src={require("../def-icon.png")} alt="user_logo"/>
             </div>
             <div id="right-most-divider" className="top-divider"></div>
             <div className="drop-down" onClick={openInfo}>

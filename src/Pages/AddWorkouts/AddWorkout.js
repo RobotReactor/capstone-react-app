@@ -7,15 +7,15 @@ export class AddWorkout extends Component {
     super(props);
 
     this.state={
-      exercise:[]
+      exercises:[]
     }
   }
 
   refreshList() {
-    fetch(variables.API_URL+'exercise')
+    fetch(variables.API_URL+'exercises')
     .then(response=>response.json())
     .then(data=>{
-      this.setState({exercise:data});
+      this.setState({exercises:data});
     });
   }
 
@@ -25,51 +25,29 @@ export class AddWorkout extends Component {
   render() {
 
     const {
-      exercise
+      exercises
     }=this.state;
+
+    
 
       return (
 
         <div id="main-screen" className="main-screen">
-            <table className='table table-striped'>
-              <thread>
-                <tr>
-                  <th>
-                    id
-                  </th>
-                  <th>
-                    exerciseID
-                  </th>
-                  <th>
-                    setNumber
-                  </th>
-                  <th>
-                    reps
-                  </th>
-                  <th>
-                    weight
-                  </th>
-                  <th>
-                    userID
-                  </th>
-                  <th>
-                    workoutDate
-                  </th>
-                </tr>
-              </thread>
-              <tbody>
-                {exercise.map(exercise=>
-                  <tr key={exercise.id}>
-                    <td>{exercise.id}</td>
-                    <td>{exercise.exerciseID}</td>
-                    <td>{exercise.setNumber}</td>
-                    <td>{exercise.reps}</td>
-                    <td>{exercise.weight}</td>
-                    <td>{exercise.userID}</td>
-                    <td>{exercise.workoutDate}</td>
-                  </tr>
-                  )}
-              </tbody>
+            <table className='table table-striped table-bordered'>
+                <thead>
+                    <tr>
+                        <th>Exercise Name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {exercises.map(exercises=>
+                        <tr key={exercises.exercise_id}>
+                            <td>{exercises.exercise_name}</td>
+                            <td>{exercises.exercise_desc}</td>
+                        </tr>
+                    )}
+                </tbody>
             </table>
         </div>
       )
