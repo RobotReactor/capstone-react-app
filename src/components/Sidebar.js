@@ -32,7 +32,7 @@ const Sidebar = () => {
 
   return (
     <div id="sidebar" className="sidebar">
-        <ul>
+        <ul className="ull">
             <NavLink className="main-list-item" to="#">
                 <a href="/dashboard/" className="main-anchor">
                     <span className="main-emblem"><img src={require("../main-emblem.png")} alt="Main Emblem"/></span>
@@ -40,51 +40,51 @@ const Sidebar = () => {
                 </a>
             </NavLink>
             <NavLink id="itemHome" className="list-item" to="/dashboard/home" onClick={onClik}>
-                <a href="/dashboard/home" className="minor-anchor">
-                    <span className="nav-icon"><i className="fa fa-area-chart" aria-hidden="true"></i></span>
-                    <span className="title">Dashboard</span>
+                <a href="/dashboard/home" className="minor-anchor text-decoration-none">
+                    <span className="nav-icon"><i className="fa fa-area-chart text-decoration-none" aria-hidden="true"></i></span>
+                    <span className="minor-title text-decoration-none">Dashboard</span>
                 </a>
             </NavLink>
             <NavLink id="itemLog"  className="list-item" to="/dashboard/log-workout" onClick={onClik}>
-                <a href="/dashboard/log-workout" className="minor-anchor">
+                <a href="/dashboard/log-workout" className="minor-anchor text-decoration-none">
                     <span className="nav-icon"><i className="fa fa-tasks" aria-hidden="true"></i></span>
-                    <span className="title">Log Workout</span>
+                    <span className="minor-title text-decoration-none">Log Workout</span>
                 </a>
             </NavLink>
             <NavLink id="itemAdd"  className="list-item" to="/dashboard/add-workout" onClick={onClik}>
-                <a href="/dashboard/add-workout" className="minor-anchor">
+                <a href="/dashboard/add-workout" className="minor-anchor text-decoration-none">
                     <span className="nav-icon"><i className="fa fa-file-text" aria-hidden="true"></i></span>
-                    <span className="title">Add Workouts</span>
+                    <span className="minor-title text-decoration-none">Add Workouts</span>
                 </a>
             </NavLink>
             <NavLink id="itemMeasure" className="list-item" to="/dashboard/measurements" onClick={onClik}>
-                <a href="/dashboard/measurements" className="minor-anchor">
+                <a href="/dashboard/measurements" className="minor-anchor text-decoration-none">
                     <span className="nav-icon"><i className="fa fa-cubes" aria-hidden="true"></i></span>
-                    <span className="title">Measurements</span>
+                    <span className="minor-title text-decoration-none">Measurements</span>
                 </a>
             </NavLink>
             <NavLink id="itemGoals" className="list-item" to="/dashboard/goals" onClick={onClik}>
-                <a href="/dashboard/goals" className="minor-anchor">
+                <a href="/dashboard/goals" className="minor-anchor text-decoration-none">
                     <span className="nav-icon"><i className="fa fa-trophy" aria-hidden="true"></i></span>
-                    <span className="title">Goals</span>
+                    <span className="minor-title text-decoration-none">Goals</span>
                 </a>
             </NavLink>
             <NavLink id="itemSettings" className="list-item" to="/dashboard/settings" onClick={onClik}>
-                <a href="/dashboard/settings" className="minor-anchor">
+                <a href="/dashboard/settings" className="minor-anchor text-decoration-none">
                     <span className="nav-icon"><i className="fa fa-cogs" aria-hidden="true"></i></span>
-                    <span className="title">Settings</span>
+                    <span className="minor-title text-decoration-none">Settings</span>
                 </a>
             </NavLink>
             <NavLink id="itemHelp" className="list-item" to="/dashboard/help" onClick={onClik}>
-                <a href="/dashboard/sign-out" className="minor-anchor">
+                <a href="/dashboard/sign-out" className="minor-anchor text-decoration-none">
                     <span className="nav-icon"><i className="fa fa-question" aria-hidden="true"></i></span>
-                    <span className="title">Help</span>
+                    <span className="minor-title text-decoration-none">Help</span>
                 </a>
             </NavLink>
             <NavLink id="itemSign" className="list-item" to="/dashboard/sign-out" onClick={onClik}>
-                <a href="/dashboard/sign-out" className="minor-anchor">
+                <a href="/dashboard/sign-out" className="minor-anchor text-decoration-none">
                     <span className="nav-icon"><i className="fa fa-sign-out" aria-hidden="true"></i></span>
-                    <span className="title">Sign Out</span>
+                    <span className="minor-title text-decoration-none">Sign Out</span>
                 </a>
             </NavLink>
         </ul>

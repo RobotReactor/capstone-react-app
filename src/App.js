@@ -11,23 +11,24 @@ import Home from './Pages/Home/Home';
 import AddWorkout from './Pages/AddWorkouts/AddWorkout';
 
 function App() {
-
     return ( 
-        <Router>
-            <Header />
-            <Sidebar />
-            <Routes>
-                <Route path='/' element={<Home />}/>
-                <Route path='/dashboard/home' element={<Home />}/>
-                <Route path='/dashboard/log-workout' element={<LogWorkout />}/>
-                <Route path='/dashboard/add-workout' element={<AddWorkout />}/>
-                <Route path='/dashboard/measurements' element={<Measurements />}/>
-                <Route path='/dashboard/goals' element={<Goals />}/>
-                <Route path='/dashboard/settings' element={<Settings />}/>
-                <Route path='/dashboard/help' element={<Help />}/>
-                <Route path='/dashboard/sign-out' element={<SignOut />}/>
-            </Routes>
-        </Router>
+        <div className='App'>
+            <Router>
+                <Header />
+                <Sidebar />
+                <Routes>
+                    <Route path='/' element={<Home />}/>
+                    <Route path='/dashboard/home' element={<Home />}/>
+                    <Route path='/dashboard/log-workout' element={<LogWorkout />}/>
+                    <Route path='/dashboard/add-workout' element={<AddWorkout />}/>
+                    <Route path='/dashboard/measurements' element={<Measurements />}/>
+                    <Route path='/dashboard/goals' element={<Goals />}/>
+                    <Route path='/dashboard/settings' element={<Settings />}/>
+                    <Route path='/dashboard/help' element={<Help />}/>
+                    <Route path='/dashboard/sign-out' element={<SignOut />}/>
+                </Routes>
+            </Router>
+        </div>
     );
 };
 

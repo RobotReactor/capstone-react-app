@@ -1,3 +1,5 @@
+import { createContext, useState } from 'react';
+
 const Header = () => {
 
     function toggleSidebar() {
@@ -29,12 +31,19 @@ const Header = () => {
     }
     
     function toggleDark() {
+
+        if(isDark === false)
+            isDark = true;
+        else isDark = false;
+
         let btnB = document.querySelector('.btn-toggle-dark-mode');
         let togSun = document.querySelector('#toggle-sun');
         let togMoon = document.querySelector('#toggle-moon');
+        
         btnB.classList.toggle('active');
         togSun.classList.toggle('active');
         togMoon.classList.toggle('active');
+
     }
     
     function toggleCalendar() {
@@ -59,53 +68,53 @@ const Header = () => {
         info2.classList.toggle('active');
         btn.classList.toggle('active');
     }
-
-  return (
-      <header>
-        <div className="top-dock">
-            <div className="btn-toggle"  onClick={toggleSidebar}>
-                <i id="tog-sammy" className="fa fa-bars" aria-hidden="true"></i>
-                <i id="tog-x" className="fa fa-times" aria-hidden="true"></i>
+     return (
+        <header>
+            <div className="top-dock">
+                <div className="btn-toggle"  onClick={toggleSidebar}>
+                    <i id="tog-sammy" className="fa fa-bars" aria-hidden="true"></i>
+                    <i id="tog-x" className="fa fa-times" aria-hidden="true"></i>
+                </div>
+                <div className="btn-section replacable-section">
+                    <div className="top-divider"></div>
+                    <div id="langModalBtn" className="modalButton btn-language" title="Change the Language">
+                        <i className="fa fa-globe" aria-hidden="true"></i>
+                    </div>
+                    <div id="quoteModalBtn" className="modalButton btn-quote" title="Quote Someone">
+                        <i className="fa fa-quote-right" aria-hidden="true"></i>
+                    </div>
+                    <div id="notifModalBtn" className="modalButton btn-notify" title="Turn on Notifications">
+                        <i className="fa fa-bell" aria-hidden="true"></i>
+                    </div>
+                    <div className="top-divider"></div>
+                </div>
+                <div className="btn-section">
+                    <div className="top-divider"></div>
+                    <div className="btn-toggle-dark-mode" onClick={toggleDark} title="Toggle Dark Mode">
+                        <i id="toggle-sun" className="fa fa-sun-o" aria-hidden="true"></i>
+                        <i id="toggle-moon" className="fa fa-moon-o" aria-hidden="true"></i>
+                    </div>
+                    <div className="btn-toggle-all-time" onClick={toggleCalendar} title="Change Time-Frame">
+                        <i id="cal-week" className="fa fa-calendar-o" aria-hidden="true"></i>
+                        <i id="cal-month" className="fa fa-calendar" aria-hidden="true"></i>
+                    </div>
+                    <div className="btn-units" onClick={toggleUnit} title="Change Unit of Measurement">
+                        <i className="fa fa-flask" aria-hidden="true"></i>
+                    </div>
+                    <div className="top-divider"></div>
+                </div>
+                <h5 style={{margin:'15px'}}>Maxwell Bourcier</h5>
+                <div className="user">
+                    <img src={require("../def-icon.png")} alt="user_logo"/>
+                </div>
+                <div id="right-most-divider" className="top-divider"></div>
+                <div className="drop-down" onClick={openInfo}>
+                    <i id="tog-dwn" className="fa fa-angle-down" aria-hidden="true"></i>
+                    <i id="tog-up" className="fa fa-angle-up" aria-hidden="true"></i>
+                </div>
             </div>
-            <div className="btn-section replacable-section">
-                <div className="top-divider"></div>
-                <div id="langModalBtn" className="modalButton btn-language" title="Change the Language">
-                    <i className="fa fa-globe" aria-hidden="true"></i>
-                </div>
-                <div id="quoteModalBtn" className="modalButton btn-quote" title="Quote Someone">
-                    <i className="fa fa-quote-right" aria-hidden="true"></i>
-                </div>
-                <div id="notifModalBtn" className="modalButton btn-notify" title="Turn on Notifications">
-                    <i className="fa fa-bell" aria-hidden="true"></i>
-                </div>
-                <div className="top-divider"></div>
-            </div>
-            <div className="btn-section">
-                <div className="top-divider"></div>
-                <div className="btn-toggle-dark-mode" onClick={toggleDark} title="Toggle Dark Mode">
-                    <i id="toggle-sun" className="fa fa-sun-o" aria-hidden="true"></i>
-                    <i id="toggle-moon" className="fa fa-moon-o" aria-hidden="true"></i>
-                </div>
-                <div className="btn-toggle-all-time" onClick={toggleCalendar} title="Change Time-Frame">
-                    <i id="cal-week" className="fa fa-calendar-o" aria-hidden="true"></i>
-                    <i id="cal-month" className="fa fa-calendar" aria-hidden="true"></i>
-                </div>
-                <div className="btn-units" onClick={toggleUnit} title="Change Unit of Measurement">
-                    <i className="fa fa-flask" aria-hidden="true"></i>
-                </div>
-                <div className="top-divider"></div>
-            </div>
-            <div className="user">
-                <img src={require("../def-icon.png")} alt="user_logo"/>
-            </div>
-            <div id="right-most-divider" className="top-divider"></div>
-            <div className="drop-down" onClick={openInfo}>
-                <i id="tog-dwn" className="fa fa-angle-down" aria-hidden="true"></i>
-                <i id="tog-up" className="fa fa-angle-up" aria-hidden="true"></i>
-            </div>
-        </div>
-    </header>
-  );
+        </header>
+    );
 }
 
 export default Header
