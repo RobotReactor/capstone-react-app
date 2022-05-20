@@ -3,32 +3,33 @@ import { variables } from '../../Components/Variables';
 
 export class AddWorkout extends Component {
 
-  constructor(props){
-    super(props);
+    constructor(props){
+        super(props);
 
-    this.state={
-      exercises:[]
+        this.state={
+        sessions:[]
+        };
     }
-  }
 
-  refreshList() {
-    fetch(variables.API_URL+'exercises')
-    .then(response=>response.json())
-    .then(data=>{
-      this.setState({exercises:data});
-    });
-  }
+    refreshList() {
+        fetch(variables.API_URL+'sessions')
+        .then(response=>response.json())
+        .then(data=>{
+        this.setState({sessions:data});
+        });
+    }
 
-  componentDidMount() {
-    this.refreshList();
-  }
-  render() {
+    componentDidMount() {
+        this.refreshList();
+    }
+    render() {
 
     const {
-      exercises
+        sessions
     }=this.state;
 
-    
+    const current = new Date();
+    const dates = `${current.getMonth()+1}/${current.getDate()}/${current.getFullYear()}`;
 
       return (
 
@@ -36,19 +37,26 @@ export class AddWorkout extends Component {
             <table className='table table-striped table-bordered'>
                 <thead>
                     <tr>
-                        <th>Exercise Name</th>
-                        <th>Description</th>
+                        <th>Session</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Today's Date</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {exercises.map(exercises=>
-                        <tr key={exercises.exercise_id}>
-                            <td>{exercises.exercise_name}</td>
-                            <td>{exercises.exercise_desc}</td>
+                    {sessions.map(sessions=>
+                        <tr key={sessions.session}>
+                            <td>{sessions.session}</td>
+                            <td>{sessions.session_date}</td>
+                            <td>{sessions.session_time}</td>
+                            <td>{dates}</td>
                         </tr>
                     )}
                 </tbody>
             </table>
+
+
+
         </div>
       )
    }

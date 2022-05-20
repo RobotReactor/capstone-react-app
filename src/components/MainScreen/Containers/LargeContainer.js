@@ -1,9 +1,11 @@
 import React from 'react';
 import './large-container.css';
 
-const LargeContainer = () => {
+const LargeContainer = (props) => {
   return (
-    <div className="lg-container"></div>
+    <div className="lg-container">
+        {props.children}
+    </div>
   )
 }
 

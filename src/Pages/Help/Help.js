@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MainScreen from '../../Components/MainScreen/MainScreen';
 import { variables } from '../../Components/Variables';
 
 export class Help extends Component {
@@ -27,12 +28,10 @@ export class Help extends Component {
         const {
           users
         }=this.state;
-    
-        
-    
+
           return (
     
-            <div id="main-screen" className="main-screen">
+            <MainScreen>
                 <table className='table table-striped table-bordered'>
                     <thead>
                         <tr>
@@ -69,7 +68,8 @@ export class Help extends Component {
                         )}
                     </tbody>
                 </table>
-            </div>
+
+            </MainScreen>
           )
     }
 }

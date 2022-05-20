@@ -1,9 +1,9 @@
 import React from 'react';
 
-const MainScreen = () => {
+const MainScreen = (props) => {
     return (
       <div id="main-screen" className="main-screen">
-        
+          {props.children}
       </div>
     )
 }

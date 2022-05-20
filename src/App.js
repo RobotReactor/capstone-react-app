@@ -11,8 +11,9 @@ import Home from './Pages/Home/Home';
 import AddWorkout from './Pages/AddWorkouts/AddWorkout';
 
 function App() {
-    return ( 
-        <div className='App'>
+
+    return (
+        <div style={{backgroundColor: 'rgb(207, 207, 207)'}} className='App'>
             <Router>
                 <Header />
                 <Sidebar />

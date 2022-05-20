@@ -7,6 +7,9 @@
     /* outline: 2px solid rgb(9, 255, 0); */
     --background-color: rgb(207, 207, 207);
 }
+.main {
+    background-color: rgb(207, 207, 207);
+}
 
 .top-dock {
     z-index: 2;
@@ -22,11 +25,14 @@
     transition: all 1s;
     background-color: rgb(207, 207, 207);
     padding: 0 10px;
+    background-color: rgb(207, 207, 207);
 }
 
 .top-dock.active {
     left: 300px;
     width: calc(100% - 300px);
+    background-color: rgb(207, 207, 207);
+
 }
 
 .btn-section {
@@ -37,6 +43,7 @@
     width: 200px;
     height: 100%;
     margin-left: auto;
+    background-color: rgb(207, 207, 207);
 }
 
 .top-divider {
@@ -61,6 +68,13 @@
     color: rgb(56, 91, 209);
     margin-left: 10px;
     transition: all 1s;
+}
+.username-display {
+    width: 220px;
+    color: rgb(99, 99, 99);
+    text-align: center;
+    transition: width 1.5s;
+    transition: font-size 1s;
 }
 
 .btn-toggle:hover {
@@ -793,12 +807,18 @@
         min-width: 40px;
         transition: all 1s;
     }
+    .username-display {
+        font-size: 10px;
+        width: 130px;
+        transition: all 1s;
+    }
 }
 
 @media (max-width: 640px) {
     .replacable-section {
         opacity: 0;
     }
+
 }
 
 @media (max-width: 560px) {

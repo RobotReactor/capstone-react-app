@@ -1,5 +1,3 @@
-import { createContext, useState } from 'react';
-
 const Header = () => {
 
     function toggleSidebar() {
@@ -31,11 +29,6 @@ const Header = () => {
     }
     
     function toggleDark() {
-
-        if(isDark === false)
-            isDark = true;
-        else isDark = false;
-
         let btnB = document.querySelector('.btn-toggle-dark-mode');
         let togSun = document.querySelector('#toggle-sun');
         let togMoon = document.querySelector('#toggle-moon');
@@ -43,7 +36,6 @@ const Header = () => {
         btnB.classList.toggle('active');
         togSun.classList.toggle('active');
         togMoon.classList.toggle('active');
-
     }
     
     function toggleCalendar() {
@@ -103,7 +95,7 @@ const Header = () => {
                     </div>
                     <div className="top-divider"></div>
                 </div>
-                <h5 style={{margin:'15px'}}>Maxwell Bourcier</h5>
+                <h5 className='username-display' style={{margin:'15px'}}>Maxwell Bourcier</h5>
                 <div className="user">
                     <img src={require("../def-icon.png")} alt="user_logo"/>
                 </div>
