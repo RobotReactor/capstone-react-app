@@ -11,7 +11,7 @@ const Goals = () => {
     const muscleGroup_Legs = 'Legs';
 
     const [data, setData] = useState([]);
-    let [searchTerm] = useState(muscleGroup_Arms);
+    let [searchTerm] = useState('');
 
     const getData=()=>{
         fetch(variables.API_URL+'exercises'
@@ -53,7 +53,7 @@ const Goals = () => {
         else if(val.muscle_group_name.toString().includes(searchTerm)){
           return val;
         }
-      }).map((val,key)=>{
+      }).map((val)=>{
         return <>{data && data.length > 0 && <option>{val.exercise_name}</option>}</>
         })} 
     </select>  

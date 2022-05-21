@@ -45,16 +45,16 @@ const Sidebar = () => {
                     <span className="minor-title text-decoration-none">Dashboard</span>
                 </a>
             </NavLink>
-            <NavLink id="itemLog"  className="list-item" to="/dashboard/log-workout" onClick={onClik}>
-                <a href="/dashboard/log-workout" className="minor-anchor text-decoration-none">
-                    <span className="nav-icon"><i className="fa fa-tasks" aria-hidden="true"></i></span>
-                    <span className="minor-title text-decoration-none">Log Workout</span>
-                </a>
-            </NavLink>
             <NavLink id="itemAdd"  className="list-item" to="/dashboard/add-workout" onClick={onClik}>
                 <a href="/dashboard/add-workout" className="minor-anchor text-decoration-none">
                     <span className="nav-icon"><i className="fa fa-file-text" aria-hidden="true"></i></span>
                     <span className="minor-title text-decoration-none">Add Workouts</span>
+                </a>
+            </NavLink>
+            <NavLink id="itemLog"  className="list-item" to="/dashboard/log-workout" onClick={onClik}>
+                <a href="/dashboard/log-workout" className="minor-anchor text-decoration-none">
+                    <span className="nav-icon"><i className="fa fa-tasks" aria-hidden="true"></i></span>
+                    <span className="minor-title text-decoration-none">Log Workout</span>
                 </a>
             </NavLink>
             <NavLink id="itemMeasure" className="list-item" to="/dashboard/measurements" onClick={onClik}>

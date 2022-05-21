@@ -1,6 +1,8 @@
-import { type } from '@testing-library/user-event/dist/type';
-import React, { Component } from 'react';
+import React, {Component } from 'react';
+import MainScreen from '../../Components/MainScreen/MainScreen';
 import { variables } from '../../Components/Variables';
+import InfoModal from '../../Components/InfoModal';
+import { center } from '../../Components/CenterItem';
 
 export class AddWorkout extends Component {
 
@@ -8,7 +10,7 @@ export class AddWorkout extends Component {
         super(props);
 
         this.state={
-        sessions:[]
+            sessions: [],
         };
     }
 
@@ -21,47 +23,31 @@ export class AddWorkout extends Component {
     }
 
     componentDidMount() {
+        
         this.refreshList();
     }
+
     render() {
 
-    const {
-        sessions
-    }=this.state;
+    // const {
+    //     sessions
+    // }=this.state;
 
     const current = new Date();
     var month = current.getMonth() + 1;
+
     if(month <= 9)
-        month = '0'+month;  
+        month = '0' + month;  
+
     const dates = `${month}/${current.getDate()}/${current.getFullYear()}`;
 
       return (
-
-        <div id="main-screen" className="main-screen">
-            <table className='table table-striped table-bordered'>
-                <thead>
-                    <tr>
-                        <th>Session</th>
-                        <th>Date</th>
-                        <th>Time</th>
-                        <th>Today's Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {sessions.map(sessions=>
-                        <tr key={sessions.session}>
-                            <td>{sessions.session}</td>
-                            <td>{sessions.session_date}</td>
-                            <td>{sessions.session_time}</td>
-                            <td>{dates}</td>
-                        </tr>
-                    )}
-                </tbody>
-            </table>
-
-
-
-        </div>
+        <MainScreen>
+           <InfoModal>
+               
+           </InfoModal>
+           <h2></h2>
+        </MainScreen>
       )
    }
 }
