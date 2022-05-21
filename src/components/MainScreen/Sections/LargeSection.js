@@ -1,10 +1,12 @@
 import React from 'react'
-import './small-section.css';
+import './large-section.css';
 
 
-const LargeSection = () => {
+const LargeSection = (props) => {
   return (
-    <div className="big-section"></div>
+    <div className="big-section">
+        {props.children}
+    </div>
   )
 }
 

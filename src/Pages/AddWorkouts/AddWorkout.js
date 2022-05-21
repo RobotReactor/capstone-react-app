@@ -1,3 +1,4 @@
+import { type } from '@testing-library/user-event/dist/type';
 import React, { Component } from 'react';
 import { variables } from '../../Components/Variables';
 
@@ -29,7 +30,10 @@ export class AddWorkout extends Component {
     }=this.state;
 
     const current = new Date();
-    const dates = `${current.getMonth()+1}/${current.getDate()}/${current.getFullYear()}`;
+    var month = current.getMonth() + 1;
+    if(month <= 9)
+        month = '0'+month;  
+    const dates = `${month}/${current.getDate()}/${current.getFullYear()}`;
 
       return (
 

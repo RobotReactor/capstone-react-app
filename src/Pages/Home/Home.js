@@ -1,39 +1,31 @@
 import React from 'react'
+import LargeContainer from '../../Components/MainScreen/Containers/LargeContainer'
+import MediumContainer from '../../Components/MainScreen/Containers/MediumContainer'
+import SmallContainer from '../../Components/MainScreen/Containers/SmallContainer'
+import MainScreen from '../../Components/MainScreen/MainScreen'
+import LargeSection from '../../Components/MainScreen/Sections/LargeSection'
+import SmallSection from '../../Components/MainScreen/Sections/SmallSection'
 
 const Home = () => {
   return (
-    <div id="main-screen" className="main-screen">
-        <div className="top-container">
-            <div className="top-page-info">
-                <div className="bc-info">
-                    <div className="head-info">
-                        <i className="fa fa-building"></i>
-                        <h5>Main Dashboard</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div className="lg-container">
-            <div className="big-section"></div>
-            <div className="nrml-section"></div>
-        </div>
-        <div className="md-container">
-            <div className="big-section"></div>
-            <div className="big-section"></div>
-        </div>
-        <div className="sm-container">
-            <div className="nrml-section"></div>
-            <div className="big-section"></div>
-        </div>
-        <div className="lg-container">
-            <div className="nrml-section"></div>
-            <div className="nrml-section"></div>
-            <div className="nrml-section"></div>
-        </div>
-        <div className="lg-container">
-            <div className="big-section"></div>
-        </div>
-    </div>
+    <MainScreen>
+        <MediumContainer>
+            <SmallSection></SmallSection>
+            <SmallSection></SmallSection>
+            <SmallSection></SmallSection>
+        </MediumContainer>
+        <LargeContainer>
+            <SmallSection>Stuff Goes Here</SmallSection>
+            <SmallSection></SmallSection>
+            <SmallSection></SmallSection>
+            <SmallSection><h1>HI</h1></SmallSection>
+        </LargeContainer>
+        <SmallContainer>
+            <LargeSection><h6>Short Stuff Goes Here</h6></LargeSection>
+            <SmallSection></SmallSection>
+            <SmallSection></SmallSection>
+        </SmallContainer>
+    </MainScreen>
    
   )
 }

@@ -1,6 +1,17 @@
+import { getAccordionDetailsUtilityClass } from '@mui/material';
 import React, { Component } from 'react';
 import MainScreen from '../../Components/MainScreen/MainScreen';
 import { variables } from '../../Components/Variables';
+
+const fetchData = () => {
+    fetch(variables.API_URL+'users')
+        .then((res) =>
+           res.json())
+
+           .then((response) => {
+               alert(response);
+           })
+}
 
 export class Help extends Component {
 
@@ -14,7 +25,7 @@ export class Help extends Component {
     
       refreshList() {
         fetch(variables.API_URL+'users')
-        .then(response=>response.json())
+        .then(res=>res.json())
         .then(data=>{
           this.setState({users:data});
         });
@@ -32,7 +43,8 @@ export class Help extends Component {
           return (
     
             <MainScreen>
-                <table className='table table-striped table-bordered'>
+               
+                {/* <table className='table table-striped table-bordered'>
                     <thead>
                         <tr>
                             <th>User ID</th>
@@ -67,7 +79,7 @@ export class Help extends Component {
                             </tr>
                         )}
                     </tbody>
-                </table>
+                </table> */}
 
             </MainScreen>
           )

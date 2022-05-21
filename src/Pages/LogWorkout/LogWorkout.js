@@ -61,8 +61,9 @@ export class LogWorkout extends Component {
                     )}
                 </tbody>
             </table>
-
-
+            <div>
+                
+            </div>
 
         </div>
       )

@@ -1,8 +1,10 @@
 import React from 'react'
 
-const SmallSection = () => {
+const SmallSection = (props) => {
   return (
-    <div className="nrml-section"></div>
+    <div className="nrml-section">
+        {props.children}
+    </div>
   )
 }
 

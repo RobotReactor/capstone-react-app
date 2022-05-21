@@ -1,9 +1,11 @@
 import React from 'react';
 import './medium-container.css';
 
-const MediumContainer = () => {
+const MediumContainer = (props) => {
   return (
-    <div className="md-container"></div>
+    <div className="md-container">
+        {props.children}
+    </div>
   )
 }
 
